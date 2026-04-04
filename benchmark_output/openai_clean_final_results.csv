@@ -1,0 +1,14 @@
+audio_file,wer,substitutions,deletions,insertions,reference_word_count,hypothesis_word_count
+common_voice_en_17922255.mp3,0.75,3.0,0.0,0.0,4.0,4.0
+common_voice_en_17877635.mp3,0.1667,1.0,0.0,1.0,12.0,13.0
+common_voice_en_17257228.mp3,0.1111,2.0,0.0,0.0,18.0,18.0
+common_voice_en_30513358.mp3,0.0833,1.0,0.0,0.0,12.0,12.0
+common_voice_en_18983699.mp3,0.0833,1.0,0.0,0.0,12.0,12.0
+common_voice_en_40145147.mp3,0.0833,1.0,0.0,0.0,12.0,12.0
+common_voice_en_20792443.mp3,0.0714,1.0,0.0,0.0,14.0,14.0
+common_voice_en_43618790.mp3,0.0,0.0,0.0,0.0,9.0,9.0
+common_voice_en_21099981.mp3,0.0,0.0,0.0,0.0,10.0,10.0
+common_voice_en_36941027.mp3,0.0,0.0,0.0,0.0,11.0,11.0
+common_voice_en_687348.mp3,0.0,0.0,0.0,0.0,11.0,11.0
+common_voice_en_18983698.mp3,0.0,0.0,0.0,0.0,9.0,9.0
+AVERAGE,0.1124,,,,,

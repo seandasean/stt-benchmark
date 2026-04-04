@@ -1,0 +1,13 @@
+path,sentence,condition,engine,wer,cer,rtf
+common_voice_en_30513358.mp3,Princess Vilas herself also contributed personally to the construction of the temple.,clean,whisper,0.075,0.052,0.44
+common_voice_en_43618790.mp3,He has also served in the Chamber of Deputies.,clean,whisper,0.144,0.021,0.54
+common_voice_en_21099981.mp3,Most of his subjects were found in Devon and Cornwall.,clean,whisper,0.118,0.019,0.36
+common_voice_en_39588772.mp3,Shots rang out as they fled towards the Austrian camp.,clean,whisper,0.102,0.019,0.45
+common_voice_en_37211578.mp3,The system is based on electromagnetic induction.,clean,whisper,0.049,0.025,0.48
+common_voice_en_39777874.mp3,She is working in a small restaurant and dreams of becoming an actress.,clean,whisper,0.049,0.036,0.31
+common_voice_en_39591543.mp3,It can also be a result of exposure to radiation.,clean,whisper,0.037,0.032,0.48
+common_voice_en_43609322.mp3,Neustar started as a business unit within Lockheed Martin Corporation.,clean,whisper,0.134,0.025,0.35
+common_voice_en_40015498.mp3,The Minister did not reply to this letter.,clean,whisper,0.102,0.041,0.32
+common_voice_en_39582275.mp3,In it he reviewed his entire experience of arrest and detention.,clean,whisper,0.115,0.017,0.58
+common_voice_en_39584983.mp3,These row vectors form the Gale diagram of the polytope.,clean,whisper,0.032,0.025,0.59
+common_voice_en_18124422.mp3,Give them an inch and they'll take a mile.,clean,whisper,0.146,0.028,0.54
