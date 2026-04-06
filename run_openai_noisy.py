@@ -14,7 +14,7 @@ def main():
     results = []
 
     for _, row in df.iterrows():
-        audio_file = row["path"]
+        audio_file = row["path"].replace(".mp3", "_noisy.mp3")
         reference_text = row["sentence"]
         condition = row["condition"]
 

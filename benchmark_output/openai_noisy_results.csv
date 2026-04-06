@@ -1,0 +1,13 @@
+audio_file,condition,engine,engine_version,reference_text,hypothesis_text
+common_voice_en_30513358_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,Princess Vilas herself also contributed personally to the construction of the temple.,Princess Phyllis herself also contributed personally to the construction of the cathedral.
+common_voice_en_43618790_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,He has also served in the Chamber of Deputies.,He has also served in the Chamber of Deputies.
+common_voice_en_21099981_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,Most of his subjects were found in Devon and Cornwall.,Most of his subjects are found in Devon and Cornwall.
+common_voice_en_17922255_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,"Oh, you are, eh?",
+common_voice_en_687348_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,"Sadly, my dream of becoming a squirrel whisperer may never happen.",
+common_voice_en_36941027_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,He must understand the holy words and prayers of the liturgy.,You must understand the holy words and prayers of the religion.
+common_voice_en_40145147_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,It was West who discovered Gatlin and was impressed by his songwriting.,It was Glass who discovered Gatling and was impressed by his invention.
+common_voice_en_17257228_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,"A good thing about English is, that you don't have to memorize whether things are feminine or masculine.","You think the reason is that you don't have to anyway, but the thing must be"
+common_voice_en_18983698_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,The Republican nominee in this race was Rick O'Donnell.,There are approximately one million species of insects.
+common_voice_en_18983699_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,"At the conclusion of that assignment, ""Zebra"" received orders to Pearl Harbor.",That's the conclusion of that.
+common_voice_en_20792443_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,Nils Olav was the first penguin to hold this rank in the Norwegian army.,
+common_voice_en_17877635_noisy.mp3,clean,openai_api,gpt-4o-mini-transcribe,"To increase his popularity in public-opinion polls, the politician started a campaign.","To increase his popularity in public opinion polls, the politician started a campaign."
