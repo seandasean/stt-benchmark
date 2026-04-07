@@ -9,12 +9,14 @@ This set of samples demonstrates structured audio evaluation across varying leve
 | 01 | Heavy Noise | High | Noise masking speech | Unusable |
 | 02 | Moderate Noise + Distortion | Medium | Transient distortion | Borderline |
 | 03 | Moderate Noise + Tonal/Compression | Low–Medium | Harshness + compression | Usable |
+| 04 | Reverb / Delay | Medium | Temporal smearing | Degraded over time |
 
 ## Key Observations
 
 - Noise impacts both intelligibility and system reliability  
 - Transient distortion affects clarity even when speech remains intelligible  
 - Tonal imbalance and compression artifacts can degrade quality without breaking usability  
+- Time-based effects (reverb/delay) introduce temporal smearing that reduces clarity progressively  
 
 ## Evaluation Approach
 
