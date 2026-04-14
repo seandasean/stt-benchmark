@@ -4,20 +4,17 @@
 common_voice_en_687348_reverb.wav
 
 ## Overall Impression
-Initial speech is clear, but an obvious delay/reverb effect becomes distracting shortly after onset and reduces overall clarity.
+Initial speech is clear, but introduced delay/reverb quickly degrades clarity through temporal smearing and overlapping reflections.
 
 ## Strengths
 - Initial speech is clear and intelligible  
-- Vocal source remains recognizable despite added reverb  
+- Vocal source remains recognizable despite reverb  
+- Core speech signal remains present throughout  
 
 ## Issues Detected
-- Noticeable delay/reverb tail becomes audible after the first second  
-- Time-based smearing reduces speech clarity  
-- Ambient room/noise impression is exaggerated by the repeated signal  
-
-## Strengths
-- Speech remains intelligible despite noise  
-- Vocal presence is clear and forward in the mix  
+- Noticeable delay/reverb tail emerges after initial onset  
+- Temporal smearing from overlapping reflections reduces clarity (e.g., ~0:02, ~0:04)
+- Reflected signal creates phase interference and intelligibility loss over time  
 
 ## Artifact Tags
 - REV (Reverberation / echo)
@@ -26,6 +23,11 @@ Initial speech is clear, but an obvious delay/reverb effect becomes distracting 
 
 ## Severity
 Medium
+
+## Impact on Transcription
+- Temporal overlap reduces word boundary clarity → potential insertion errors  
+- Smearing of consonants → increased substitution rate  
+- Degradation worsens over time as reflections accumulate  
 
 ## Scores
 - Naturalness: 3
@@ -38,4 +40,4 @@ Medium
 Yes
 
 ## Notes (Cause Analysis)
-Artificial delay/reverb was introduced during processing, creating repeated reflections that overlap with the original signal. This results in temporal smearing and reduced intelligibility as the signal progresses.
+Artificial delay/reverb introduces repeated reflections that overlap with the direct signal, causing temporal smearing and phase interference. As reflections accumulate, intelligibility degrades, particularly in consonant regions, leading to increased transcription errors over time.

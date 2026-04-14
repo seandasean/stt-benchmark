@@ -4,16 +4,17 @@
 common_voice_en_43618790_noisy.wav
 
 ## Overall Impression
-Moderate white noise is present but speech remains intelligible, with noticeable distortion affecting vocal transients.
-
-## Issues Detected
-- Moderate white noise present across the signal  
-- Transient distortion on speech consonants  
-- Slight degradation of clarity due to noise overlay  
+Moderate broadband noise present; speech remains intelligible with localized transient distortion affecting consonant clarity.
 
 ## Strengths
-- Speech remains intelligible despite noise  
-- Vocal presence is clear and forward in the mix  
+- Speech intelligibility largely preserved despite noise  
+- Vocal signal remains forward and well-defined  
+- Prosodic structure intact with minimal temporal disruption  
+
+## Issues Detected
+- Moderate broadband noise across full signal  
+- Transient distortion on consonants (plosives/fricatives) (e.g., ~0:01, ~0:02)
+- Slight high-frequency masking reducing articulation clarity  
 
 ## Artifact Tags
 - NOI (Noise floor issue)
@@ -22,6 +23,12 @@ Moderate white noise is present but speech remains intelligible, with noticeable
 
 ## Severity
 Medium
+
+
+## Impact on Transcription
+- Mild phoneme smearing → potential substitution errors  
+- Transient distortion may reduce consonant accuracy  
+- Overall transcription remains stable with minor degradation  
 
 ## Scores
 - Naturalness: 3
@@ -34,4 +41,4 @@ Medium
 Yes
 
 ## Notes (Cause Analysis)
-White noise introduced during processing is interacting with speech transients, causing mild distortion and reduced clarity. Likely due to additive noise at a moderate level without compensatory gain staging or filtering.
+Moderate noise layer interacts with speech transients, introducing localized distortion in consonant regions. Likely caused by additive noise without compensatory gain staging or transient preservation, resulting in partial phoneme degradation but not full intelligibility loss.

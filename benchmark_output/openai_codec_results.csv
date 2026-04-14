@@ -1,0 +1,13 @@
+audio_file,condition,engine,engine_version,reference_text,hypothesis_text
+common_voice_en_30513358_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,Princess Vilas herself also contributed personally to the construction of the temple.,Princess Phyllis herself also contributed personally to the construction of the temple.
+common_voice_en_43618790_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,He has also served in the Chamber of Deputies.,He has also served in the Chamber of Deputies.
+common_voice_en_21099981_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,Most of his subjects were found in Devon and Cornwall.,Most of his subjects were found in Devon and Cornwall.
+common_voice_en_17922255_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,"Oh, you are, eh?",Are you all right?
+common_voice_en_687348_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,"Sadly, my dream of becoming a squirrel whisperer may never happen.","Sadly, my dream of becoming a squirrel whisperer may never happen."
+common_voice_en_36941027_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,He must understand the holy words and prayers of the liturgy.,He must understand the holy words and prayers of the liturgy.
+common_voice_en_40145147_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,It was West who discovered Gatlin and was impressed by his songwriting.,It was West who discovered Gatling and was impressed by his songwriting.
+common_voice_en_17257228_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,"A good thing about English is, that you don't have to memorize whether things are feminine or masculine.",A good thing about English is that you don't have to memorise whether things are feminine or masculine.
+common_voice_en_18983698_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,The Republican nominee in this race was Rick O'Donnell.,The Republican nominee in this race was Rick O'Donnell.
+common_voice_en_18983699_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,"At the conclusion of that assignment, ""Zebra"" received orders to Pearl Harbor.","At the conclusion of that assignment, Zebra received orders to Pearl Harbor."
+common_voice_en_20792443_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,Nils Olav was the first penguin to hold this rank in the Norwegian army.,Nils Olaf was the first penguin to hold this rank in the Norwegian Army.
+common_voice_en_17877635_codec.mp3,codec_mp3_64,openai_api,gpt-4o-mini-transcribe,"To increase his popularity in public-opinion polls, the politician started a campaign.","To increase his popularity in public opinion polls, the politician started a campaign."

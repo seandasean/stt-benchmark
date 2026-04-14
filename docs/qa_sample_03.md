@@ -4,7 +4,7 @@
 common_voice_en_17877635_noisy.wav
 
 ## Overall Impression
-Speech is clear and intelligible, with moderate background noise and noticeable high-frequency emphasis contributing to a slightly processed sound.
+Speech is clear and intelligible with moderate background noise; high-frequency emphasis contributes to a slightly processed and mildly harsh tonal character.
 
 ## Strengths
 - Speech is clearly intelligible  
@@ -13,13 +13,9 @@ Speech is clear and intelligible, with moderate background noise and noticeable 
 - Overall signal remains usable despite background noise  
 
 ## Issues Detected
-- Moderate white noise present  
-- High-frequency emphasis (approx. 4–10 kHz) creating a slightly harsh tone  
-- Mild compression affecting vocal dynamics  
-
-## Strengths
-- Speech remains intelligible despite noise  
-- Vocal presence is clear and forward in the mix  
+- Moderate broadband noise present  
+- High-frequency emphasis (~4–10 kHz) introducing mild harshness (e.g., ~0:01, ~0:04)
+- Mild compression reducing dynamic range  
 
 ## Artifact Tags
 - NOI (Noise floor issue)
@@ -28,6 +24,11 @@ Speech is clear and intelligible, with moderate background noise and noticeable 
 
 ## Severity
 Low–Medium
+
+## Impact on Transcription
+- Minimal impact on intelligibility → low WER increase  
+- Slight high-frequency bias may affect sibilant/consonant balance  
+- Compression may reduce micro-dynamic cues but does not significantly impair recognition  
 
 ## Scores
 - Naturalness: 4
@@ -40,4 +41,4 @@ Low–Medium
 Yes
 
 ## Notes (Cause Analysis)
-Would benefit from noise reduction prior to deployment in higher-quality use cases.
+Combination of moderate noise and high-frequency emphasis suggests post-processing imbalance (EQ boost in upper bands) alongside mild compression. While intelligibility remains high, spectral tilt and reduced dynamics contribute to a slightly artificial tonal profile.

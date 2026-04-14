@@ -4,16 +4,17 @@
 common_voice_en_687348_noisy.wav
 
 ## Overall Impression
-Severe white noise overwhelms the signal, making speech difficult to understand.
+Severe broadband noise overwhelms the signal, resulting in near-total intelligibility loss.
 
 ## Strengths
-- None (signal overwhelmed by noise)
+- Residual speech signal remains faintly detectable beneath noise  
+- Temporal structure of speech is preserved despite masking
 
 ## Issues Detected
-- Excessive white noise masking vocal intelligibility  
-- Poor signal-to-noise ratio (noise significantly louder than speech)  
-- Speech appears recessed relative to noise floor  
-- Speech intelligibility severely degraded by broadband noise masking
+- Extreme broadband noise masking speech across full frequency spectrum (e.g., ~0:00, ~0:05)
+- Poor signal-to-noise ratio (speech significantly recessed beneath noise floor)  
+- Reduced phoneme intelligibility due to spectral masking  
+- Low-energy speech components fully obscured
 
 ## Artifact Tags
 - NOI (Noise floor issue)
@@ -22,6 +23,11 @@ Severe white noise overwhelms the signal, making speech difficult to understand.
 
 ## Severity
 High
+
+## Impact on Transcription
+- Severe phoneme masking → high substitution rate  
+- Likely word deletions due to inaudible segments  
+- Reduced model confidence across entire utterance
 
 ## Scores
 - Naturalness: 1
@@ -34,4 +40,4 @@ High
 Yes
 
 ## Notes (Cause Analysis)
-Excessive white noise was introduced during processing, overwhelming the speech signal and severely degrading intelligibility. Likely caused by aggressive noise addition or improper gain staging, resulting in a poor signal-to-noise ratio.
+Broadband noise dominates the signal, masking key speech frequencies and collapsing phoneme distinction. Likely caused by excessive noise addition or improper gain staging, resulting in critically low signal-to-noise ratio and cascading transcription errors.
