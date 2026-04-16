@@ -1,18 +1,22 @@
 # STT Benchmark — Multi-Condition Audio Evaluation
 
-This project evaluates speech-to-text (STT) performance across multiple real-world audio conditions using Word Error Rate (WER) as the primary metric.
+This project evaluates speech-to-text (STT) performance across multiple real-world audio degradation conditions using Word Error Rate (WER) as the primary metric.
+
+---
 
 ## Overview
 
-- Dataset: 12 Common Voice clips  
+- Dataset: 12 Common Voice speech clips  
 - Evaluation approach: controlled condition comparison using identical source clips  
-- Conditions:
-  - Clean (baseline)
-  - Broadband noise
-  - MP3 compression (64 kbps)
-  - Combined (noise + codec)
-- Engine: OpenAI (`gpt-4o-mini-transcribe`)  
+- STT Engine: OpenAI (`gpt-4o-mini-transcribe`)  
 - Primary metric: Word Error Rate (WER)
+
+### Conditions Evaluated
+- Clean (baseline)
+- Broadband noise (signal masking)
+- MP3 compression (64 kbps)
+- Reverb (temporal smearing)
+- Combined (noise + codec)
 
 ---
 
@@ -21,8 +25,9 @@ This project evaluates speech-to-text (STT) performance across multiple real-wor
 | Condition        | WER     | Δ vs Clean |
 |------------------|---------|------------|
 | Clean            | 0.1124  | —          |
-| Noise            | 0.3708  | +0.2584    |
+| Reverb           | 0.1078  | -0.0046    |
 | Codec (MP3 64k)  | 0.1184  | +0.0060    |
+| Noise            | 0.3708  | +0.2584    |
 | Combined         | 0.4552  | +0.3428    |
 
 - Noisy condition: **9 valid / 12 total samples (3 failures)**
@@ -31,31 +36,35 @@ This project evaluates speech-to-text (STT) performance across multiple real-wor
 
 ## Key Findings
 
-### Noise is highly destructive  
-Broadband noise significantly degrades transcription accuracy and caused complete failure in ~25% of samples.
+### Noise is the dominant failure driver  
+Broadband noise significantly degrades transcription accuracy (+0.2584 WER) and introduces complete transcription failures (~25% of samples).
 
-### Codec compression is resilient (in isolation)  
-MP3 compression at 64 kbps produced negligible WER impact when applied to clean speech.
+### Codec compression is highly resilient (in isolation)  
+MP3 compression at 64 kbps produces negligible impact on transcription accuracy when applied to clean speech.
+
+### Reverb shows no measurable degradation at moderate levels  
+Mild reverberation does not significantly impact WER, indicating robustness to temporal smearing when intelligibility is preserved.
 
 ### Stacked degradations amplify failure  
-Combining noise with codec compression increased WER to **0.4552**, substantially worse than noise alone (**0.3708**).
+Combining noise with codec compression increases WER to **0.4552**, significantly worse than noise alone (**0.3708**), demonstrating failure amplification.
 
 ### Perceptual quality ≠ transcription performance  
 Audio that sounds degraded to humans can still transcribe accurately unless core speech intelligibility is compromised.
 
-### Single-condition testing can be misleading  
-Evaluating degradations in isolation may underestimate real-world failure, where multiple artifacts interact.
+### Single-condition testing is insufficient  
+Evaluating degradations in isolation can underestimate real-world failure, where multiple artifacts interact.
 
 ---
 
-## What This Shows
+## What This Demonstrates
 
-This benchmark highlights key evaluation principles for speech systems:
+This benchmark highlights key evaluation principles for STT systems:
 
-- STT performance is driven by **intelligibility loss**, not just perceptual degradation  
-- Signal masking (noise) is significantly more damaging than compression artifacts  
-- Stacked degradations reveal **failure amplification** not visible in isolated tests  
-- Controlled condition testing helps isolate **failure modes vs. robustness zones**
+- STT performance is driven primarily by **intelligibility loss**, not perceptual degradation  
+- **Signal masking (noise)** is far more destructive than compression artifacts  
+- **Temporal smearing (reverb)** is tolerated under moderate conditions  
+- **Stacked degradations** reveal failure modes not visible in isolated tests  
+- Controlled evaluation enables clear separation of **robustness vs. failure conditions**
 
 ---
 
@@ -64,6 +73,7 @@ This benchmark highlights key evaluation principles for speech systems:
 - Clean: `benchmark_output/openai_clean_final_results.csv`  
 - Noise: `benchmark_output/openai_noisy_results.csv`  
 - Codec: `benchmark_output/openai_codec_results.csv`  
+- Reverb: `benchmark_output/openai_reverb_results.csv`  
 - Combined: `benchmark_output/openai_combined_results.csv`  
 
 ---
@@ -84,35 +94,53 @@ stt_benchmark/
 ├── nr_processing/
 ├── docs/
 
+---
+
+## Current Scope
+
+This project represents **Phase 1** of a broader STT evaluation framework:
+
+- Single-engine evaluation  
+- Multi-condition robustness testing  
+- WER as the primary comparison metric  
+- Focus on failure modes and degradation behavior  
 
 ---
 
 ## Next Steps
 
-- Expand evaluation matrix (reverb, compression artifacts, additional combinations)  
-- Compare multiple STT engines  
-- Standardize scoring and reporting workflow  
-- Incorporate bootstrap confidence intervals into headline metrics  
+- Expand condition matrix (reverb + noise, reverb + codec)  
+- Introduce additional metrics (CER, substitution/deletion breakdown)  
+- Compare multiple STT engines (Whisper, Google STT, AssemblyAI)  
+- Incorporate bootstrap confidence intervals for statistical reporting  
 
 ---
 
 ## Portfolio Summary
 
-This project evaluates how speech-to-text performance changes across multiple audio degradation conditions using OpenAI’s `gpt-4o-mini-transcribe`.
+This project evaluates how speech-to-text performance changes across realistic audio degradation conditions.
 
-On a 12-clip Common Voice sample:
-- Clean WER: **0.1124**
-- Noise WER: **0.3708**
-- Codec WER: **0.1184**
-- Combined WER: **0.4552**
+On a 12-clip Common Voice dataset:
 
-Results show that while compression alone has minimal impact, **stacked degradations significantly amplify transcription failure**, highlighting the importance of evaluating realistic multi-condition scenarios rather than isolated effects.
+- Clean WER: **0.1124**  
+- Reverb WER: **0.1078**  
+- Codec WER: **0.1184**  
+- Noise WER: **0.3708**  
+- Combined WER: **0.4552**  
+
+Results show that:
+
+- Compression and mild reverberation have minimal impact individually  
+- Noise introduces significant degradation and system instability  
+- **Stacked degradations significantly amplify transcription failure**
+
+This highlights the importance of evaluating STT systems under **multi-condition, real-world scenarios**, rather than relying on isolated tests.
 
 ---
 
 ## Audio QA Evaluation Samples
 
-In addition to benchmarking, this project includes structured audio QA evaluations that simulate real-world model review workflows.
+In addition to benchmarking, this project includes structured audio QA evaluations simulating real-world model review workflows.
 
 - [QA Portfolio Summary](docs/qa_portfolio_summary.md)
 - Sample Evaluations:
@@ -120,4 +148,7 @@ In addition to benchmarking, this project includes structured audio QA evaluatio
   - [Sample 02](docs/qa_sample_02.md)
   - [Sample 03](docs/qa_sample_03.md)
 
-These samples demonstrate evaluation across failure, degraded, and acceptable audio conditions, including artifact detection, scoring, and cause analysis.
+These demonstrate:
+- artifact detection  
+- structured evaluation scoring  
+- transcription impact analysis  
