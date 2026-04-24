@@ -87,8 +87,12 @@ Broadband noise significantly degrades transcription accuracy (+0.2584 WER) and 
 ### Codec compression is highly resilient (in isolation)  
 MP3 compression at 64 kbps produces negligible impact on transcription accuracy when applied to clean speech.
 
-### Reverb shows no measurable degradation at moderate levels  
-Mild reverberation does not significantly impact WER, indicating robustness to temporal smearing when intelligibility is preserved.
+### Reverb shows minimal impact at moderate levels  
+Across the full dataset, mild reverberation did not produce measurable degradation in WER, indicating that temporal smearing alone is insufficient to disrupt transcription when core speech intelligibility is preserved.
+
+Unlike noise, which masks phonemes and removes critical linguistic information, reverb primarily redistributes energy over time while retaining the underlying speech structure, allowing the model to recover the intended content.
+
+This highlights a key distinction: not all perceptual degradation translates to transcription failure.
 
 ### Stacked degradations amplify failure  
 Combining noise with codec compression increases WER to **0.4552**, significantly worse than noise alone (**0.3708**), demonstrating failure amplification.
@@ -99,6 +103,16 @@ Audio that sounds degraded to humans can still transcribe accurately unless core
 ### Single-condition testing is insufficient  
 Evaluating degradations in isolation can underestimate real-world failure, where multiple artifacts interact.
 
+### Degradation types affect different layers of the signal
+
+- Noise → destroys intelligibility (phoneme masking)
+- Codec → reduces fidelity but preserves structure
+- Reverb → spreads signal over time while retaining content
+
+This explains why:
+- Noise produces significant failure
+- Codec and reverb do not (in isolation)
+- Combined conditions amplify breakdown beyond any single degradation
 ---
 
 ## What This Demonstrates
